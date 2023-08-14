@@ -1,6 +1,7 @@
 // src/index.js
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors");
 // const config = require("./config");
 const routes = require("./app/routes/routes");
 // const connectDB = require("./config/db");
@@ -25,6 +26,9 @@ mongoose
 
 // Middleware
 app.use(express.json());
+
+// disable cors
+app.use(cors());
 
 // Routes
 app.use(routes);

@@ -1,6 +1,7 @@
 const ProductModel = require("../models/ProductModel");
 
 async function getProductById(productId) {
+    console.log(productId);
     return ProductModel.findById(productId);
 }
 

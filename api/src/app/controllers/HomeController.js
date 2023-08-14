@@ -12,6 +12,16 @@ async function getAllVideosThumbnail(req, res) {
     }
 }
 
+async function getDetailVideo(req, res) {
+    try {
+        const videoId = req.params.id;
+        const video = await VideoService.getDetailVideo(videoId);
+        res.json(video);
+    } catch (error) {
+        res.status(500).json({ message: "ini error" });
+    }
+}
+
 async function getAllProductsByVideoId(req, res) {
     try {
         const videoId = req.params.id;
@@ -54,6 +64,7 @@ async function createComment(req, res) {
 
 module.exports = {
     getAllVideosThumbnail,
+    getDetailVideo,
     getAllProductsByVideoId,
     getAllCommentsByVideoId,
     createComment,

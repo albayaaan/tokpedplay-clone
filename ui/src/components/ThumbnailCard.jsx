@@ -1,16 +1,23 @@
-const ThumbnailCard = () => {
+const ThumbnailCard = ({ video }) => {
     return (
         <>
-            <div className="bg-gray-100 p-3 rounded-lg">
+            <article className="relative overflow-hidden rounded-lg shadow transition hover:shadow-lg">
                 <img
-                    className="h-40 rounded w-full object-cover object-center mb-2"
-                    src="https://dummyimage.com/720x400"
-                    alt="content"
+                    alt="Office"
+                    src={video.thumbnailUrl}
+                    className="absolute inset-0 h-full w-full object-cover"
                 />
-                <h2 className="text-lg text-gray-900 font-medium title-font">
-                    Chichen Itza
-                </h2>
-            </div>
+
+                <div className="relative bg-gradient-to-t from-gray-900/50 to-gray-900/25 pt-20">
+                    <div className="p-4">
+                        <a href={"videos/" + video._id}>
+                            <h3 className="mt-0.5 text-lg text-white">
+                                {video.title}
+                            </h3>
+                        </a>
+                    </div>
+                </div>
+            </article>
         </>
     );
 };
