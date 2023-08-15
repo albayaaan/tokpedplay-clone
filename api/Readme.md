@@ -22,6 +22,7 @@
   title: String,
   price: Number,
   productUrl: String,
+  imageUrl: String,
 }
 ```
 
@@ -57,6 +58,37 @@ Returns all videos in the system.
            {<video_object>},
            {<video_object>}
          ]
+}
+```
+
+## **GET /videos/:id**
+
+Returns detail information for a video
+
+-   **URL Params**  
+    _Required:_ `id=[integer]`
+-   **Data Params**  
+    None
+-   **Headers**  
+    Content-Type: application/json
+-   **Success Response:**
+-   **Code:** 200  
+    **Content:**
+
+```
+{
+    videoId: {<video_object>},
+    embedUrl: String
+    products: [
+      {<product_object>},
+      {<product_object>},
+      {<product_object>}
+    ],
+    comments: [
+      {<comment_object>},
+      {<comment_object>},
+      {<comment_object>},
+    ]
 }
 ```
 
