@@ -7,7 +7,7 @@ This repository contains a clone of the Tokopedia Play app, built using the MERN
 
 ## Demo
 
-[View the live demo of the Tokopedia Play Clone here.](/demo.png)
+[View the live demo of the Tokopedia Play Clone here.](/)
 
 ## Features
 
@@ -30,3 +30,66 @@ This repository contains a clone of the Tokopedia Play app, built using the MERN
 - Browse through the thumbnail videos on the main page.
 - Click on a thumbnail to access the detailed video page.
 - On the detailed video page, explore related products and leave comments.
+
+## **How To Run In Local**
+### Requirements
+Before running this application, make sure you have the following software installed:
+
+- Node.js (version 14 or higher)
+- MongoDB
+- MongoShell
+  
+### Clone Project
+
+- Clone this repository to your computer
+  <pre>
+  <code>
+  git clone https://github.com/albayaaan/tokpedplay-clone.git
+  </code>
+  </pre>
+- Navigate to the project directory
+  <pre>
+  <code>
+  cd tokpedplay-clone
+  </code>
+  </pre>
+
+
+### Initialization Database
+- activate mongosh
+<pre>
+  <code>
+  mongosh
+  </code>
+</pre>
+- load database 
+<pre>
+  <code>
+  load("initialDatabase.js")
+  </code>
+</pre>
+
+
+### Install Dependencies and Running the Application
+- install and run backend server
+<pre>
+  <code>
+  cd api
+  yarn install
+  yarn dev
+  </code>
+</pre>
+- install and run frontend
+<pre>
+  <code>
+  cd ../ui
+  yarn install
+  yarn dev
+  </code>
+</pre>
+- access program
+<pre>
+  <code>
+    http://127.0.0.1:5173/
+  </code>
+</pre>
