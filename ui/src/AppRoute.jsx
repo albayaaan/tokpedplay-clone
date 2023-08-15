@@ -23,8 +23,4 @@ const AppRoute = () => {
     );
 };
 
-const Item = () => {
-    const { id } = useParams();
-    return <h1>Id = {id}</h1>;
-};
 export default AppRoute;

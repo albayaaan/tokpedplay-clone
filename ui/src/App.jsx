@@ -1,6 +1,8 @@
+import { useState } from "react";
 import AppRoute from "./AppRoute";
 
 function App() {
+    const [search, setSearch] = useState("");
     return (
         <>
             <header className="bg-gray-50">
@@ -16,6 +18,9 @@ function App() {
                                     className="h-10 w-full rounded-full border-none bg-white pe-10 ps-4 text-sm shadow-sm sm:w-56"
                                     id="search"
                                     type="search"
+                                    onChange={(e) => {
+                                        setSearch(e.target.value);
+                                    }}
                                     placeholder="Search website..."
                                 />
 
@@ -59,7 +64,7 @@ function App() {
                     </div>
                 </div>
             </header>
-            <AppRoute />
+            <AppRoute search={search} />
         </>
     );
 }

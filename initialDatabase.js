@@ -1,4 +1,4 @@
-const db = connect("mongodb://localhost:27017/tokpedplay");
+const db = connect("mongodb://localhost:27017/clone");
 
 db.videos.insertMany([
     {
